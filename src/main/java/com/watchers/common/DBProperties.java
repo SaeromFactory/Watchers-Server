@@ -2,15 +2,6 @@ package com.watchers.common;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-/**
- * Created by high on 2017. 10. 26..
- */
-/*
-@ConfigurationProperties
-아래 resources/application.properties
-파일의 데이터를 읽어 오는 역할을 합니다.
-prefix 를 설정해주면 그 이름으로 설정되어있는 데이터를 가져옵니다.
- */
 @ConfigurationProperties(prefix = "mybatis")
 public class DBProperties {
 
@@ -19,7 +10,9 @@ public class DBProperties {
     private String username;
     private String password;
     private String mapperLocation;
-
+    public DBProperties() {
+    		System.out.println("ddwdqdqd");
+    }
     public String getDriverClassName() {
         return driverClassName;
     }
