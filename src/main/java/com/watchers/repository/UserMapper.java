@@ -1,7 +1,6 @@
 package com.watchers.repository;
 
-import org.apache.ibatis.annotations.Mapper;
-
+import com.watchers.common.Mapper;
 import com.watchers.model.Users;
 
 import java.util.Map;

@@ -10,9 +10,7 @@ public class DBProperties {
     private String username;
     private String password;
     private String mapperLocation;
-    public DBProperties() {
-    		System.out.println("ddwdqdqd");
-    }
+
     public String getDriverClassName() {
         return driverClassName;
     }

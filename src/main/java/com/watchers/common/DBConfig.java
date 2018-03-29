@@ -14,23 +14,19 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 @Configuration
-@MapperScan(basePackages = "com.watchers.repository" , sqlSessionFactoryRef = "SqlSessionFactory")
+@MapperScan(basePackages = {"com.watchers.repository"} , sqlSessionFactoryRef = "SqlSessionFactory")
 public class DBConfig {
 
     @Autowired
     private DBProperties dBProperties;
-    public DBConfig() {
-    		System.out.println("tqtqtq");
-    }
+
     @Bean(name = "dataSource")
     public DataSource dataSource() {
-    		System.out.println("tq");
         DataSource dataSource = new DataSource();
         dataSource.setDriverClassName(dBProperties.getDriverClassName());
         dataSource.setUrl(dBProperties.getUrl());
         dataSource.setUsername(dBProperties.getUsername());
         dataSource.setPassword(dBProperties.getPassword());
-        System.out.println("데이터 소스 생성");
         return dataSource;
     }
 
@@ -41,8 +37,7 @@ public class DBConfig {
         sqlSessionFactoryBean.setDataSource(dataSource);
         sqlSessionFactoryBean.setConfigurationProperties(mybatisProperties());
         sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources(dBProperties.getMapperLocation()));
-        System.out.println("SqlSessionFactory 생성");
-        
+
         return sqlSessionFactoryBean.getObject();
     }
 

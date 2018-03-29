@@ -20,9 +20,6 @@ public class BoardController {
     @Autowired private BoardService boardService;
     private final int pageSize = 10;
 
-    public BoardController() {
-    		System.out.println("컨트롤러 실행 ");
-    }
     @RequestMapping( value = "/list/{page}", method = RequestMethod.GET)
     public List<Board> list(@PathVariable("page") Integer page) {
         page = (page == null) ? 1 : page;

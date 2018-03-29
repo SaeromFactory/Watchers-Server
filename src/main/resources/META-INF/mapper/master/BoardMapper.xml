@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.han.repositories.BoardMapper">
-    <select id="list" resultType="com.han.models.Board">
+<mapper namespace="com.han.repository.BoardMapper">
+    <select id="list" resultType="com.watchers.model.Board">
         SELECT id, title, contents
         , created_at as createdAt
         , created_id as createdId
