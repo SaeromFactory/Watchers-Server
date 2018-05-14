@@ -22,4 +22,26 @@
             ,updated_at = now()
         WHERE id = #{id}
     </update>
+    <delete id="del">
+        DELETE
+        FROM boards
+        WHERE idx = #{idx}
+    </delete>
+    <select id="search_id">
+        SELECT COUNT(*)
+        FROM boards b, user u
+        // include 태그 삽입 : 연결
+        <include refid="search"></include>
+    </select>
+
+    <sql id="search">
+        WHERE b.id = u.id
+    </sql>
+
+    <select id="view">
+        SELECT *
+        FROM boards
+        WHERE idx=#{idx}
+    </select>
+
 </mapper>

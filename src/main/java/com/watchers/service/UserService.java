@@ -7,10 +7,13 @@ import com.watchers.repository.UserMapper;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
+@Component
 public class UserService {
+
     @Autowired private UserMapper userMapper;
 
     public CommonResponse login(Users user){
@@ -29,6 +32,10 @@ public class UserService {
     
     public void addUser(Map<String, Object> param) {
     		userMapper.addUser(param);
+    }
+
+    public boolean getByID(String id){
+        return (userMapper.getByID(id)!= null);
     }
     
 }

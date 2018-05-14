@@ -20,6 +20,7 @@ public class DBProperties {
     }
 
     public String getUrl() {
+
         return url;
     }
 

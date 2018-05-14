@@ -4,14 +4,14 @@ import java.sql.Timestamp;
 
 public class History {
 	
-	private Long id;
+	private String id;
 	private Long similarity;
 	private Long accuracy;
 	private Timestamp inputTime;
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public Long getSimilarity() {

@@ -3,9 +3,8 @@ package com.watchers.model;
 import java.sql.Timestamp;
 
 public class RawData {
-	
+
 	private Long id;
-	private String gender;
 	private Long spinemid;
 	private Long spinebase;
 	private Long hipleft;
@@ -21,12 +20,6 @@ public class RawData {
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
 	}
 	public Long getSpinemid() {
 		return spinemid;

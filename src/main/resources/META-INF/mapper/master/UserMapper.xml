@@ -21,5 +21,11 @@
     		INSERT INTO Users(id, name, gender, pw, email)
     		VALUES(#{id}, #{name}, #{gender}, #{pw}, #{email})
     </insert>
-    
+
+    <select id="getById" resultType="com.watchers.model.Users">
+        SELECT id,password,email
+        FROM users
+        WHERE id = #{id}
+    </select>
+
 </mapper>

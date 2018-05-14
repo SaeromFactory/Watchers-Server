@@ -3,8 +3,8 @@ package com.watchers.model;
 import java.sql.Timestamp;
 
 public class Board {
-	
-	private Long id;
+	private int idx;
+	private String id;
 	private Long num;
 	private String title;
 	private String contents;
@@ -13,11 +13,19 @@ public class Board {
 	private Long tag;
 	private String createdAt;
 	private String createdId;
-	
-	public Long getId() {
+
+	public int getIdx() {
+		return idx;
+	}
+
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
+
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public Long getNum() {
@@ -71,6 +79,7 @@ public class Board {
 	
 	@Override
 	public String toString() {
-		return null;
+		return "id : "  + id  + "\n"+ "title : "+ title + " \n "  + "content : " + contents
+				+ "firstDate : " + firstDate;
 	}
 }

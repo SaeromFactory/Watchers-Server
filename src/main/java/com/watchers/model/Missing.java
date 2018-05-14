@@ -14,6 +14,7 @@ public class Missing {
 	private Date end_age;
 	private String etcsfeatr;
 	private String occradres;
+
 	public Long getId() {
 		return id;
 	}

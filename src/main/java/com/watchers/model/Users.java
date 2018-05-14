@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class Users {
 	
-	private Long id;
+	private String id;
 	private String gender;
 	private String pw;
 	private Long type;
@@ -15,10 +15,10 @@ public class Users {
 	private String token;
 	private Timestamp createdAt;
 	
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getGender() {
@@ -78,6 +78,6 @@ public class Users {
 	
 	@Override
 	public String toString() {
-		return null;
+		return "id : " + id + "gender : " + gender + " type : " + type + "email : " + email;
 	}
 }
